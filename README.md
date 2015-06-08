@@ -1,6 +1,6 @@
 # reflectinsight-extensions-nlog
 
-[![Build status](https://img.shields.io/appveyor/ci/reflectsoftware/reflectinsight-extensions-nlog.svg)](https://ci.appveyor.com/project/reflectsoftware/reflectinsight-extensions-nlog)
+[![Build status](https://ci.appveyor.com/api/projects/status/m86nud3i0p8hx7c1?svg=true)](https://ci.appveyor.com/project/reflectsoftware/reflectinsight-extensions-nlog)
 [![Release](https://img.shields.io/github/release/reflectsoftware/reflectinsight-extensions-nlog.svg)](https://github.com/reflectsoftware/reflectinsight-extensions-nlog/releases/latest)
 [![NuGet Version](http://img.shields.io/nuget/v/reflectsoftware.insight.extensions.nlog.svg?style=flat)](http://www.nuget.org/packages/ReflectSoftware.Insight.Extensions.NLog/)
 [![NuGet](https://img.shields.io/nuget/dt/reflectsoftware.insight.extensions.nlog.svg)](http://www.nuget.org/packages/ReflectSoftware.Insight.Extensions.NLog/)
