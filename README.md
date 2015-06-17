@@ -18,7 +18,49 @@ The benefits to using the Insight Extensions is that you can easily and quickly 
 
 ## Getting Started
 
-Coming soon...
+To install ReflectSoftware.Insight.Extensions.NLog extension, run the following command in the Package Manager Console:
+
+```powershell
+Install-Package ReflectSoftware.Insight.Extensions.NLog
+```
+
+Then in your app.config or web.config file, add the following configuration sections:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <section name="insightSettings" type="ReflectSoftware.Insight.ConfigurationHandler,ReflectSoftware.Insight" />
+    <section name="nlog" type="NLog.Config.ConfigSectionHandler, NLog" />
+  </configSections>
+
+  <!-- Logging Configuration 
+       Please make sure you update the Insight.config file property 'Copy to Output Directory' to 'Copy always'.
+       For more information on ReflectInsight and configuration help, visit http://reflectsoftware.com. -->
+  <insightSettings externalConfigSource="ReflectInsight.config" />
+
+  <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <!-- In order to receive location information, you must ensure the layout has the parameter ${callsite} and all 
+    its properties set accordantly. -->
+    <extensions>
+      <add assembly="ReflectSoftware.Insight.Extensions.NLog" />
+    </extensions>
+    <targets>
+      <target name="ReflectInsight" xsi:type="ReflectInsight" instanceName="nlogInstance1" displayLevel="true" displayLocation="true" layout="${callsite:className=true:fileName=true:includeSourcePath=true:methodName=true}" />
+    </targets>
+    <rules>
+      <logger name="*" minlevel="TRACE" writeTo="ReflectInsight" />
+    </rules>
+  </nlog>
+  
+  <startup> 
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0" />
+  </startup>
+</configuration>
+```
+
+Additional configuration details for the ReflectSoftware.Insight.Extensions.NLog logging extension can be found [here](https://reflectsoftware.atlassian.net/wiki/display/RI5/NLog+Extension).
+
 
 ## Additional Resources
 
