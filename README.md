@@ -34,10 +34,26 @@ Then in your app.config or web.config file, add the following configuration sect
     <section name="nlog" type="NLog.Config.ConfigSectionHandler, NLog" />
   </configSections>
 
-  <!-- Logging Configuration 
-       Please make sure you update the Insight.config file property 'Copy to Output Directory' to 'Copy always'.
-       For more information on ReflectInsight and configuration help, visit http://reflectsoftware.com. -->
-  <insightSettings externalConfigSource="ReflectInsight.config" />
+  <insightSettings>
+    <baseSettings>
+      <configChange enabled="true"/>
+      <propagateException enabled="false"/>
+      <exceptionEventTracker time="20"/>
+      <debugMessageProcess enabled="true"/>
+    </baseSettings>
+
+    <listenerGroups active="Debug">
+      <group name="Debug" enabled="true" maskIdentities="false">
+        <destinations>
+          <destination name="Viewer" enabled="true" filter="" details="Viewer"/>
+        </destinations>
+      </group>
+    </listenerGroups>
+
+    <logManager>
+      <instance name="nlogInstance1" category="NLog" bkColor=""/>
+    </logManager>
+  </insightSettings>
 
   <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <!-- In order to receive location information, you must ensure the layout has the parameter ${callsite} and all 
