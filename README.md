@@ -75,7 +75,7 @@ Then in your app.config or web.config file, add the following configuration sect
 </configuration>
 ```
 
-Additional configuration details for the ReflectSoftware.Insight.Extensions.NLog logging extension can be found [here](https://reflectsoftware.atlassian.net/wiki/display/RI5/NLog+Extension).
+Additional configuration details for the **ReflectSoftware.Insight.Extensions.NLog** logging extension can be found in our [documentation](https://reflectsoftware.atlassian.net/wiki/display/RI5/NLog+Extension).
 
 
 ## Additional Resources
@@ -87,3 +87,5 @@ Additional configuration details for the ReflectSoftware.Insight.Extensions.NLog
 [Submit User Feedback](http://reflectsoftware.uservoice.com/forums/158277-reflectinsight-feedback)
 
 [Contact Support](support@reflectsoftware.com)
+
+[ReflectSoftware Website](http://reflectsoftware.com)

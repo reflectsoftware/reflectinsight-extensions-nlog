@@ -1,8 +1,17 @@
 REFLECTSOFTWARE INC.
 REFLECTINSIGHT LOGGING LIBRARY
-VERSION 5.4
+VERSION 5.5
 
 RELEASE NOTES
+
+Version 5.5.1
+- Bug fixes for packages improperly being downloaded. RabbitMQ is now a nuget dependency.
+
+Version 5.5.0
+- New HttpRequest message type
+- New JSON message type
+- General bug fixes and enhancements
+- Performance tuning
 
 Version 5.4.0
 - Added auto save log file by file size

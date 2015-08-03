@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
     <metadata>
         <id>ReflectSoftware.Insight.Extensions.NLog</id>
-        <version>5.4.0</version>
+        <version>5.5.1</version>
         <title>ReflectSoftware.Insight.Extensions.NLog</title>
         <authors>ReflectSoftware Inc.</authors>
         <owners>ReflectSoftware Inc.</owners>
@@ -23,20 +23,20 @@ You can view your NLog messages in realtime, in a rich viewer that allows you to
 As of version 5.1 of the ReflectInsight NuGet Package, you are now required to manually add in the ReflectInsight configuration details that you may require. 
 
 For help on configuration, please see our documentation on the website (https://insightextensions.codeplex.com/wikipage?title=Getting%20Started%20with%20NLog%20Extension&amp;referringTitle=Documentation) and/or the knowledgebase articles on our UserVoice site (http://reflectsoftware.uservoice.com/knowledgebase).</releaseNotes>
-        <copyright>© 2014 ReflectSoftware Inc.</copyright>
+        <copyright>© 2015 ReflectSoftware Inc.</copyright>
         <tags>NLog Logging Extensions ReflectInsight Appender Log Tracing RabbitMQ</tags>
         <dependencies>
             <dependency id="NLog" version="3.1.0" />
-            <dependency id="ReflectSoftware.Insight" version="5.4.0" />
+            <dependency id="ReflectSoftware.Insight" version="5.5.1" />
         </dependencies>
         <references>
             <reference file="ReflectSoftware.Insight.Extensions.NLog.dll" />
         </references>
     </metadata>
     <files>
-        <file src="lib\net20\ReflectSoftware.Insight.Extensions.NLog.dll" target="lib\net20\ReflectSoftware.Insight.Extensions.NLog.dll" />
-        <file src="lib\net40\ReflectSoftware.Insight.Extensions.NLog.dll" target="lib\net40\ReflectSoftware.Insight.Extensions.NLog.dll" />
-        <file src="lib\net45\ReflectSoftware.Insight.Extensions.NLog.dll" target="lib\net45\ReflectSoftware.Insight.Extensions.NLog.dll" />
+				<file src="bin\release\net20\ReflectSoftware.Insight.Extensions.NLog.dll" target="lib\net20\ReflectSoftware.Insight.Extensions.NLog.dll" />
+        <file src="bin\release\net40\ReflectSoftware.Insight.Extensions.NLog.dll" target="lib\net40\ReflectSoftware.Insight.Extensions.NLog.dll" />
+        <file src="bin\release\net45\ReflectSoftware.Insight.Extensions.NLog.dll" target="lib\net45\ReflectSoftware.Insight.Extensions.NLog.dll" />
         <file src="readme.txt" target="readme.txt" />
     </files>
 </package>

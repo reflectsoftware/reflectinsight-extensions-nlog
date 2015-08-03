@@ -1,6 +1,6 @@
 param(
     [String] $majorMinor = "5.5",  # 5.5
-    [String] $patch = "0",         # $env:APPVEYOR_BUILD_VERSION
+    [String] $patch = "1",         # $env:APPVEYOR_BUILD_VERSION
     [String] $customLogger = "",   # C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll
     [Switch] $notouch,
     [String] $project = "ReflectSoftware.Insight.Extensions.NLog"
@@ -39,14 +39,23 @@ function Invoke-NuGetPackProj($csproj)
 
 function Invoke-NuGetPackSpec($nuspec, $version)
 {
-    nuget pack $nuspec -Version $version -OutputDirectory ..\..\
+    
+		nuget pack $nuspec -Version $version -OutputDirectory ..\
 }
 
 function Invoke-NuGetPack($version)
 {
-    ls src/**/*.csproj |
+    #ls src/**/*.csproj |
+    #    Where-Object { -not ($_.Name -like "*net40*") } |
+    #    ForEach-Object { Invoke-NuGetPackProj $_ }
+		
+		ls src/**/*.csproj |
         Where-Object { -not ($_.Name -like "*net40*") } |
         ForEach-Object { Invoke-NuGetPackProj $_ }
+
+    pushd .\src
+    Invoke-NuGetPackSpec "ReflectSoftware.Insight.Extensions.NLog.nuspec" $version
+    popd
 }
 
 function Invoke-Build($project, $majorMinor, $patch, $customLogger, $notouch)
@@ -70,10 +79,10 @@ function Invoke-Build($project, $majorMinor, $patch, $customLogger, $notouch)
     Install-NuGetPackages $solution45    
     Invoke-MSBuild $solution45 $customLogger
 	
-	Install-NuGetPackages $solution4    
+	  Install-NuGetPackages $solution4    
     Invoke-MSBuild $solution4 $customLogger
 	
-	Install-NuGetPackages $solution2    
+	  Install-NuGetPackages $solution2    
     Invoke-MSBuild $solution2 $customLogger
 
     Invoke-NuGetPack $package
