@@ -34,7 +34,7 @@ For help on configuration, please see our documentation on the website (https://
         </references>
     </metadata>
     <files>
-				<file src="bin\release\net20\ReflectSoftware.Insight.Extensions.NLog.dll" target="lib\net20\ReflectSoftware.Insight.Extensions.NLog.dll" />
+				<file src="bin\release\net35\ReflectSoftware.Insight.Extensions.NLog.dll" target="lib\net35\ReflectSoftware.Insight.Extensions.NLog.dll" />
         <file src="bin\release\net40\ReflectSoftware.Insight.Extensions.NLog.dll" target="lib\net40\ReflectSoftware.Insight.Extensions.NLog.dll" />
         <file src="bin\release\net45\ReflectSoftware.Insight.Extensions.NLog.dll" target="lib\net45\ReflectSoftware.Insight.Extensions.NLog.dll" />
         <file src="readme.txt" target="readme.txt" />
