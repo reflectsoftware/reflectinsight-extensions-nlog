@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
     <metadata>
         <id>ReflectSoftware.Insight.Extensions.NLog</id>
-        <version>5.5.3</version>
+        <version>$version$</version>
         <title>ReflectSoftware.Insight.Extensions.NLog</title>
         <authors>ReflectSoftware Inc.</authors>
         <owners>ReflectSoftware Inc.</owners>
