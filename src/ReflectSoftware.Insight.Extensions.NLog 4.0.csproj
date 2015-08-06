@@ -77,9 +77,8 @@
       <HintPath>..\packages\RabbitMQ.Client.3.5.4\lib\net40\RabbitMQ.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ReflectSoftware.Insight, Version=5.5.0.1500, Culture=neutral, PublicKeyToken=c78ddbdaf1f32b08, processorArchitecture=MSIL">
+    <Reference Include="ReflectSoftware.Insight">
       <HintPath>..\packages\ReflectSoftware.Insight.5.5.1-test2\lib\net40\ReflectSoftware.Insight.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
