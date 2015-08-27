@@ -6,8 +6,8 @@
         <title>ReflectSoftware.Insight.Extensions.NLog</title>
         <authors>ReflectSoftware Inc.</authors>
         <owners>ReflectSoftware Inc.</owners>
-        <licenseUrl>http://insightextensions.codeplex.com/license</licenseUrl>
-        <projectUrl>http://insightextensions.codeplex.com</projectUrl>
+        <licenseUrl>https://github.com/reflectsoftware/reflectinsight-extensions-nlog/blob/master/LICENSE.md</licenseUrl>
+        <projectUrl>https://github.com/reflectsoftware/reflectinsight-extensions-nlog</projectUrl>
         <iconUrl>http://reflectsoftware.com/images/ri_logo_green.ico</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>We've added support for the NLog appender. This allows you to leverage your current investment in NLog, but leverage the power and flexibility that comes with the ReflectInsight viewer. 
@@ -18,11 +18,7 @@ http://www.ReflectSoftware.com/Public/Download.aspx
 
 You can view your NLog messages in realtime, in a rich viewer that allows you to filter out and search for what really matters to you.</description>
         <summary>ReflectInsight NLog logging extention makes it easy to integrate ReflectInsight into your existing application logging infrastructure and leverage the power of the ReflectInsight log viewer.</summary>
-        <releaseNotes>The NLog extension supports v2.1.0. However if you need to support an older version, then you will need to download the ReflectInsight Logging Extensions Library from CodePlex. You can then reference and rebuild the extension against your a specific release of the NLog dll.
-
-As of version 5.1 of the ReflectInsight NuGet Package, you are now required to manually add in the ReflectInsight configuration details that you may require. 
-
-For help on configuration, please see our documentation on the website (https://reflectsoftware.atlassian.net/wiki/display/RI5/ReflectInsight+5+documentation) and/or the knowledgebase articles on our UserVoice site (http://reflectsoftware.uservoice.com/knowledgebase).</releaseNotes>
+        <releaseNotes></releaseNotes>
         <copyright>© 2015 ReflectSoftware Inc.</copyright>
         <tags>NLog Logging Extensions ReflectInsight Appender Log Tracing RabbitMQ</tags>
         <dependencies>
