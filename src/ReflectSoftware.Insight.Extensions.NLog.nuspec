@@ -20,7 +20,7 @@ You can view your NLog messages in realtime, in a rich viewer that allows you to
         <summary>ReflectInsight NLog logging extention makes it easy to integrate ReflectInsight into your existing application logging infrastructure and leverage the power of the ReflectInsight log viewer.</summary>
         <releaseNotes></releaseNotes>
         <copyright>© 2015 ReflectSoftware Inc.</copyright>
-        <tags>NLog Logging Extensions ReflectInsight Appender Log Tracing RabbitMQ</tags>
+        <tags>reflectinsight logging log logfiles events nlog exception handling structured tracing trace debug diagnostic</tags>
         <dependencies>
             <dependency id="NLog" version="3.1.0" />
             <dependency id="ReflectSoftware.Insight" version="5.5.1" />
