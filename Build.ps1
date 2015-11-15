@@ -17,6 +17,7 @@ function Set-AssemblyVersions($informational, $assembly)
 
 function Install-NuGetPackages($solution)
 {
+	(New-Object Net.WebClient).DownloadFile('https://www.nuget.org/nuget.exe', 'C:\Tools\NuGet\NuGet.exe')
     nuget restore $solution
 }
 
