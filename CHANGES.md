@@ -1,5 +1,10 @@
 ## Change Log ##
 
+#### Version 5.6.1 ####
+* Updated to NLog v4.3.5
+* Updated to ReflectInsight v5.6.1.2
+* Updated to .NET 4.5.1
+
 #### Version 5.6.0 ####
  * Updated extension to use ReflectInsight 5.6.0 version
  * Dropping support for older .NET versions. As of this release, we're only deploying NuGet package for .NET 4.5. However the source code still supports older framework. 
