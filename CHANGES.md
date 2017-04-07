@@ -1,5 +1,8 @@
 ## Change Log ##
 
+#### Version 5.6.2 ####
+* Updated to support NLog v4.4.5
+ 
 #### Version 5.6.1 ####
 * Updated to NLog v4.3.5
 * Updated to ReflectInsight v5.6.1.2
