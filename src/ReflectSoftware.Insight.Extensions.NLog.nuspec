@@ -22,7 +22,7 @@ You can view your NLog messages in realtime, in a rich viewer that allows you to
         <copyright>© 2017 ReflectSoftware Inc.</copyright>
         <tags>reflectinsight logging log logfiles events nlog exception handling structured tracing trace debug diagnostic</tags>
         <dependencies>
-            <dependency id="NLog" version="4.4.5" />
+            <dependency id="NLog" version="4.4.9" />
             <dependency id="ReflectSoftware.Insight" version="5.7.0.0" />
         </dependencies>
         <references>
