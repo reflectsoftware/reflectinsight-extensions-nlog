@@ -25,7 +25,7 @@ namespace ReflectSoftware.Insight.Extensions.NLog
     {
         class ActiveStates
         {
-            public ReflectInsight RI { get; set; }
+            public IReflectInsight RI { get; set; }
             public Boolean DisplayLevel { get; set; }
             public Boolean DisplayLocation { get; set; }
         }
@@ -39,14 +39,24 @@ namespace ReflectSoftware.Insight.Extensions.NLog
         public String DisplayLevel { get; set; }
         public String DisplayLocation { get; set; }
 
-        //--------------------------------------------------------------------
+        /// <summary>
+        /// Initializes the <see cref="NLogTarget"/> class.
+        /// </summary>
+        /// <remarks>
+        /// The default value of the layout is: <code>${longdate}|${level:uppercase=true}|${logger}|${message}</code>
+        /// </remarks>
         static NLogTarget()
         {
             FLine = String.Format("{0,40}", String.Empty).Replace(" ", "-");
             FSendInternalErrorMethodInfo = typeof(ReflectInsight).GetMethod("SendInternalError", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.InvokeMethod);
         }
 
-        //--------------------------------------------------------------------
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NLogTarget"/> class.
+        /// </summary>
+        /// <remarks>
+        /// The default value of the layout is: <code>${longdate}|${level:uppercase=true}|${logger}|${message}</code>
+        /// </remarks>
         public NLogTarget()
         {
             InstanceName = String.Empty;
@@ -56,27 +66,36 @@ namespace ReflectSoftware.Insight.Extensions.NLog
             RIEventManager.OnServiceConfigChange += DoOnConfigChange;
         }
 
-        //--------------------------------------------------------------------
+        /// <summary>
+        /// Initializes the target. Can be used by inheriting classes
+        /// to initialize logging.
+        /// </summary>
         protected override void InitializeTarget()
         {
             base.InitializeTarget();
             OnConfigChange();
         }
 
-        //--------------------------------------------------------------------
+        /// <summary>
+        /// Closes the target and releases any unmanaged resources.
+        /// </summary>
         protected override void CloseTarget()
         {
             RIEventManager.OnServiceConfigChange -= DoOnConfigChange;
             base.CloseTarget();
         }
 
-        //--------------------------------------------------------------------
+        /// <summary>
+        /// Does the on configuration change.
+        /// </summary>
         private void DoOnConfigChange()
         {
             OnConfigChange();
         }
 
-        //--------------------------------------------------------------------
+        /// <summary>
+        /// Called when [configuration change].
+        /// </summary>
         private void OnConfigChange()
         {
             try
@@ -96,12 +115,25 @@ namespace ReflectSoftware.Insight.Extensions.NLog
                 RIExceptionManager.Publish(ex, "Failed during: NLogTarget.OnConfigChange()");
             }
         }
-        ///--------------------------------------------------------------------
-        static private Boolean SendInternalError(ReflectInsight ri, MessageType mType, Exception ex)
+
+        /// <summary>
+        /// Sends the internal error.
+        /// </summary>
+        /// <param name="ri">The ri.</param>
+        /// <param name="mType">Type of the m.</param>
+        /// <param name="ex">The ex.</param>
+        /// <returns></returns>
+        static private Boolean SendInternalError(IReflectInsight ri, MessageType mType, Exception ex)
         {
             return (Boolean)FSendInternalErrorMethodInfo.Invoke(ri, new object[] { mType, ex });
         }
-        //--------------------------------------------------------------------
+
+        /// <summary>
+        /// Sends the message.
+        /// </summary>
+        /// <param name="states">The states.</param>
+        /// <param name="mType">Type of the m.</param>
+        /// <param name="logEvent">The log event.</param>
         private static void SendMessage(ActiveStates states, MessageType mType, LogEventInfo logEvent)
         {
             try
@@ -152,7 +184,11 @@ namespace ReflectSoftware.Insight.Extensions.NLog
             }
         }
 
-        //--------------------------------------------------------------------
+        /// <summary>
+        /// Writes logging event to the log target. Must be overridden in inheriting
+        /// classes.
+        /// </summary>
+        /// <param name="logEvent">Logging event to be written out.</param>
         protected override void Write(LogEventInfo logEvent)
         {
             ActiveStates states = CurrentActiveStates;

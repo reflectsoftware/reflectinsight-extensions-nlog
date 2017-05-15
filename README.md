@@ -12,7 +12,7 @@
 
 We've added support for the NLog appender. This allows you to leverage your current investment in NLog, but leverage the power and flexibility that comes with the ReflectInsight viewer. You can view your NLog messages in real-time, in a rich viewer that allows you to filter out and search for what really matters to you.
 
-The NLog extension supports v2.0.0.2. However if you need to support an older version, then you will need to download the ReflectInsight Logging Extensions Library from GitHub. You can then reference and rebuild the extension against your a specific release of the NLog dll. (Note: if you use the Nuget Package, the update to the latest version of NLog will be automatic).
+The NLog extension supports v4.4.9. However if you need to support an older version, then you will need to download the ReflectInsight Logging Extensions Library from GitHub. You can then reference and rebuild the extension against your a specific release of the NLog dll. (Note: if you use the Nuget Package, the update to the latest version of NLog will be automatic).
 
 ## Benefits of ReflectInsight Extensions ##
 

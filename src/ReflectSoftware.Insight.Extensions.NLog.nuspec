@@ -23,15 +23,13 @@ You can view your NLog messages in realtime, in a rich viewer that allows you to
         <tags>reflectinsight logging log logfiles events nlog exception handling structured tracing trace debug diagnostic</tags>
         <dependencies>
             <dependency id="NLog" version="4.4.5" />
-            <dependency id="ReflectSoftware.Insight" version="5.6.1.2" />
+            <dependency id="ReflectSoftware.Insight" version="5.7.0.0" />
         </dependencies>
         <references>
             <reference file="ReflectSoftware.Insight.Extensions.NLog.dll" />
         </references>
     </metadata>
     <files>
-	      <!--<file src="bin\release\net35\ReflectSoftware.Insight.Extensions.NLog.dll" target="lib\net35\ReflectSoftware.Insight.Extensions.NLog.dll" />
-        <file src="bin\release\net40\ReflectSoftware.Insight.Extensions.NLog.dll" target="lib\net40\ReflectSoftware.Insight.Extensions.NLog.dll" />-->
-        <file src="bin\release\net45\ReflectSoftware.Insight.Extensions.NLog.dll" target="lib\net45\ReflectSoftware.Insight.Extensions.NLog.dll" />
+	      <file src="bin\release\net45\ReflectSoftware.Insight.Extensions.NLog.dll" target="lib\net45\ReflectSoftware.Insight.Extensions.NLog.dll" />
     </files>
 </package>
