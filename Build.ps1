@@ -1,6 +1,6 @@
 param(
     [String] $majorMinor = "5.7",  # 5.7
-    [String] $patch = "0",         # $env:APPVEYOR_BUILD_VERSION
+    [String] $patch = "1",         # $env:APPVEYOR_BUILD_VERSION
     [String] $customLogger = "",   # C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll
     [Switch] $notouch,
     [String] $project = "ReflectSoftware.Insight.Extensions.NLog"
