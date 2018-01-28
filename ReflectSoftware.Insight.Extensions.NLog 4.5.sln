@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution Items", "_Solution Items", "{5083DB16-D99D-48E4-8B72-90F9AFD54F7C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assests", "assests", "{5083DB16-D99D-48E4-8B72-90F9AFD54F7C}"
 	ProjectSection(SolutionItems) = preProject
 		Build.ps1 = Build.ps1
 		CHANGES.md = CHANGES.md
@@ -18,6 +18,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{090EFB50-1C6
 		src\ReflectSoftware.Insight.Extensions.NLog.nuspec = src\ReflectSoftware.Insight.Extensions.NLog.nuspec
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{6EFFA1B1-A77F-4FC7-B929-C6334E957132}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ECBA0108-C303-4346-8330-B8931FFF0255}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectInsight.Extensions.NLog.Sample", "Sample\ReflectInsight.Extensions.NLlog.Sample\ReflectInsight.Extensions.NLog.Sample.csproj", "{BE9BC0D1-B2C8-4EC9-8CAC-CB0557DBD008}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,11 +34,20 @@ Global
 		{2955A8B1-7872-4D04-8C11-5B95214BFAC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2955A8B1-7872-4D04-8C11-5B95214BFAC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2955A8B1-7872-4D04-8C11-5B95214BFAC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE9BC0D1-B2C8-4EC9-8CAC-CB0557DBD008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE9BC0D1-B2C8-4EC9-8CAC-CB0557DBD008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE9BC0D1-B2C8-4EC9-8CAC-CB0557DBD008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE9BC0D1-B2C8-4EC9-8CAC-CB0557DBD008}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{2955A8B1-7872-4D04-8C11-5B95214BFAC0} = {ECBA0108-C303-4346-8330-B8931FFF0255}
 		{090EFB50-1C65-4644-8275-D2E9C4E463BE} = {5083DB16-D99D-48E4-8B72-90F9AFD54F7C}
+		{BE9BC0D1-B2C8-4EC9-8CAC-CB0557DBD008} = {6EFFA1B1-A77F-4FC7-B929-C6334E957132}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD3214D7-2C8E-41B3-90AE-64440074DCA3}
 	EndGlobalSection
 EndGlobal
