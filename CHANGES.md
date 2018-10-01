@@ -1,5 +1,10 @@
 ## Change Log ##
 
+#### Version 5.7.3 ####
+ * Updated reference to Newtonsoft.Json v11.0.2
+ * Updated to NLog v4.5.10
+ * Updated sample
+
 #### Version 5.7.2 ####
  * Updated to ReflectInsight v5.7.1.1
  * Updated reference to Newtonsoft.Json v10.0.3
